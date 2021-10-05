@@ -7,7 +7,6 @@ function plotCanvas(data_canvas, main_title, y_title){
         animationEnabled: true,
         animationDuration: 6000,
         height: 822,
-        width:1540,
         title: {
             padding: 15,
             text: main_title,
@@ -41,7 +40,7 @@ function plotCanvas(data_canvas, main_title, y_title){
 };
 
 function init(){
-    
+    // Indeed Jobs
     d3.json('../static/resources/indeed_jobs.json').then(function(response) {
         var keys = Object.keys(response);
 
@@ -102,6 +101,7 @@ function init(){
     });
 }
 
+// Government Jobs 
 d3.selectAll("#selDataset").on("change", updatePage);
 
 function updatePage(){
